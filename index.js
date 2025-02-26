@@ -75,6 +75,10 @@ const min = String(data.getMinutes())
         
 // Rotas
 
+    app.get("/", (req, res) => {
+        res.redirect("/usuarios/registro"); 
+    });
+
     app.use("/admin", admin);
     app.use("/usuarios", usuarios);
 
