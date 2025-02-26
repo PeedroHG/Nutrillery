@@ -1,0 +1,79 @@
+{{>_navbar}}
+
+<style>
+  #calendar {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.fc .fc-button-primary {
+  background-color: #1C6758;
+  border-color: #1C6758;
+}
+</style>
+
+
+<div id='calendar'></div>
+
+
+<script>
+
+  $(window).on("load", () => {
+
+    function onDateClick(evento) {
+      let data = evento.dateStr;
+      
+      let url = `/admin/refeicoes?data=${data}`;
+
+      window.location.href = url;
+    }
+
+    function onEventClick(evento) {
+
+    }
+
+    function desenharCalendario(eventos) {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+          left: 'prev',
+          center: 'title',
+          right: 'next'
+        },
+        dateClick: onDateClick,
+        eventClick: onEventClick,
+        events: eventos,
+
+      });
+
+      //calendario.setOption('locale', 'pt-BR');
+      calendar.render();
+    }
+
+    $.ajax({ method: "GET", url: "/admin/calendario/json" }).done((refeicoes) => {
+
+      let events = refeicoes.map((refeicao) => {
+
+        return {
+          id: refeicao.id_refeição,
+          title: refeicao.tipo_refeicao,
+          start: refeicao.data_refeicao,
+          backgroundColor: (refeicao.fastfood) ? '#ff0000' : "#cfe2ff",
+          textColor: (refeicao.fastfood) ? '#ff0000' : "#cfe2ff",
+          borderColor: '#0d6efd',
+        }
+
+      })
+
+      desenharCalendario(events);
+
+    })
+
+  })
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+  });
+
+</script>

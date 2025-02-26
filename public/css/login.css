@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #1C6758, #C2E59C);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px, 5px, 15px, rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.botao_enviar {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    background: linear-gradient(to left, #3D8361,  #1C6758);
+    cursor: pointer;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 6px;
+}
+
+.botao_enviar:hover {
+    background: linear-gradient(to right, #3D8361,  #1C6758);
+}
+
+a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: black;    
+}
+
+a:link, a:visited {
+    color: black
+}

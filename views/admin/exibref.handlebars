@@ -1,0 +1,72 @@
+<style>
+    .image-food {
+        width: 100%;
+        aspect-ratio: 2/1;
+        object-fit: cover;
+    }
+
+    .icon_triste {
+        margin-top: 25%;
+    }
+
+    .emoji {
+        width: 150px;
+    }
+</style>
+
+{{>_navbar}}
+<center>
+<div class="container mt-4">
+<h1>Página de exibição das Refeições</h1>
+<hr>
+
+<div class="row">
+{{#each refeicoes}}
+<div class="col-12 col-md-4">
+<div class="card">
+
+  <img src="../../{{foto}}" class="card-img-top image-food">  
+
+  <div class="card-body">
+
+    <h5 class="card-title">{{tipo_refeicao}}</h5>
+
+    <p class="card-text">
+        Motivação: {{motivacao}}
+    </p>
+
+    <p class="card-text">
+        {{#if fastfood}}
+
+            <div class="alert alert-danger">
+                FastFood: Sim
+            </div>
+
+            {{else}}
+
+                <div class="alert alert-success">
+                    FastFood: Não
+                </div>
+                
+        {{/if}}
+    </p>
+
+
+    <p class="card-text"><small class="text-muted">{{formatDate Data_refeicao}} - {{hora_refeicao}}</small></p>
+
+  </div>
+
+</div><br>
+</div>
+
+{{else}}
+
+<div class="icon_triste">
+<h2 style="color: rgb(92, 88, 88);">Não há refeições cadastradas nesse dia!</h2>
+<img src="../../public/img/icon_triste.png" class="emoji">
+</div>
+
+{{/each}}
+</div>
+</div>
+</center>

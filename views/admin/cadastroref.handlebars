@@ -1,0 +1,69 @@
+{{>_navbar}}
+<div class="container mt-4">
+
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+
+
+<h2>Cadastro de Refeições</h2>
+<hr>
+
+<form action="/admin/refeicao/add" method="post" class="row g-2" enctype="multipart/form-data">
+
+
+    <div class="col-md-6">
+
+        <label for="tipo" style="font-size: 20px;"><b>Tipo: </b></label>
+        
+            <select class="form-select mt-2" name="tiporef">
+                {{#each tipo}}
+                    <option value="{{nome}}">{{nome}}</option>
+                {{/each}}
+            </select>
+
+            <input type="checkbox" class="form-check-input" name="fastfood" value="1">
+                <label class="form-check-label">FastFood</label>
+
+    </div>
+
+
+    <div class="col-md-6">
+        
+        <label for="motivacao" class="form-label" style="font-size: 20px;"><b>Motivação</b></label>
+            
+            <select id="motivacao" class="form-select" name="motivacao">
+                <option value="Fome">Fome</option>
+                <option value="Ansiedade">Ansiedade</option>
+                <option value="Tristeza">Tristeza</option>
+                <option value="Outro">Outro</option>
+            </select><br>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <label for="data" class="form-label" style="font-size: 20px;" ><b>Data</b></label>
+            <input type="date" class="form-control" name="dataref" value="{{dataAtual}}"><br>      
+    
+    </div>
+
+    <div class="col-md-6">
+        
+        <label for="horario" class="form-label" style="font-size: 20px;"><b>Horário</b></label>
+            <input type="time" class="form-control" name="timeref" value="{{horaAtual}}"><br>       
+    
+    </div>
+    
+    <div class="mb-3">
+        <label for="formFile" class="form-label" style="font-size: 20px;"><b>Foto da Refeição</b></label>
+            <input class="form-control" type="file" id="formFile" accept="image/*" name="file">
+    </div>
+
+    <button class="btn btn-success">Cadastrar Refeição</button>
+
+</form>
+</div>
