@@ -10,8 +10,7 @@ Desenvolvido como Trabalho de Conclusão de Curso (TCC) para o curso Técnico em
 
 ### 🛠️ Tecnologias Utilizadas
 
-<img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white">
-<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+<img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white">
 <img src="https://img.shields.io/badge/Handlebars%20js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black">
 <img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white">
@@ -20,7 +19,7 @@ Desenvolvido como Trabalho de Conclusão de Curso (TCC) para o curso Técnico em
 
 
 O projeto está hospedado no Railway e pode ser acessado pelo link:<br>
-🔗 **[https://seu-projeto.up.railway.app](https://nutrillery-production.up.railway.app/usuarios/registro)**
+🔗 **[Nutrilerry](https://nutrillery-production.up.railway.app/usuarios/registro)**
 
 ### ▶️ Como Executar Localmente
 
