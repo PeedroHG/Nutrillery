@@ -77,6 +77,7 @@ router.post("/registro", (req, res) => {
 
         }).catch((erro) => {
             req.flash("error_msg", "Houve um erro interno")
+            console.log("caiu aqui")
             res.redirect("/")
         })
     }
