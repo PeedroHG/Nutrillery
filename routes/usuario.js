@@ -76,6 +76,7 @@ router.post("/registro", (req, res) => {
             }
 
         }).catch((erro) => {
+            console.log(erro)
             res.redirect("/")
         })
     }
