@@ -15,12 +15,6 @@ Desenvolvido como Trabalho de Conclusão de Curso (TCC) para o curso Técnico em
 <img src="https://img.shields.io/badge/Handlebars%20js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black">
 <img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white">
 
-### 🚀 Link
-
-
-O projeto está hospedado no Railway e pode ser acessado pelo link:<br>
-🔗 **[Nutrilerry](https://nutrillery-production.up.railway.app/usuarios/registro)**
-
 ### ▶️ Como Executar Localmente
 
 Instale as dependências:
